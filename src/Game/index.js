@@ -5,6 +5,16 @@ const path = require('path');
 const Logger   = require('./Logger'),
       Terminal = require('./Terminal');
 
+/**
+ * @type {string}
+ */
+const __VERSION = '0.0.0';
+
+/**
+ * @type {string}
+ */
+const __LOG_PATH = path.normalize(__dirname + '/../../logs');
+
 class Game {
 
     constructor() {}
@@ -13,7 +23,7 @@ class Game {
      * Initializes the game.
      */
     init() {
-        Logger.init(Game.LOG_PATH);
+        Logger.init(__LOG_PATH);
         
         Logger.log('Game.init()');
 
@@ -45,11 +55,15 @@ class Game {
             100
         );
     }
-};
 
-/**
- * @type {string}
- */
-Game.LOG_PATH = path.normalize(__dirname + '/../../logs');
+    /**
+     * Returns the version of the game.
+     * 
+     * @returns {string} The version of the game.
+     */
+    getVersion() {
+        return __VERSION;
+    }
+};
 
 module.exports = new Game();
