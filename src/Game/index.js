@@ -12,6 +12,7 @@ class Game {
     init() {
         console.log('Game.init()');
 
+        Terminal.init();
         // TODO: Add after proper exit/escape handling was added.
         // Terminal.lock();
     }
