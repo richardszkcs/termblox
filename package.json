@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/richardszkcs/termblox/issues"
   },
-  "homepage": "https://github.com/richardszkcs/termblox#readme"
+  "homepage": "https://github.com/richardszkcs/termblox#readme",
+  "dependencies": {
+    "terminal-kit": "^1.17.2"
+  }
 }
