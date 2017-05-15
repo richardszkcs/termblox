@@ -1,6 +1,9 @@
 "use strict";
 
-const Terminal = require('./Terminal');
+const path = require('path');
+
+const Logger   = require('./Logger'),
+      Terminal = require('./Terminal');
 
 class Game {
 
@@ -10,7 +13,9 @@ class Game {
      * Initializes the game.
      */
     init() {
-        console.log('Game.init()');
+        Logger.init(Game.LOG_PATH);
+        
+        Logger.log('Game.init()');
 
         Terminal.init();
         // TODO: Add after proper exit/escape handling was added.
@@ -21,14 +26,14 @@ class Game {
      * Starts the game.
      */
     start() {
-        console.log('Game.start()');
+        Logger.log('Game.start()');
     }
 
     /**
      * Exits the game.
      */
     exit() {
-        console.log('Game.exit()');
+        Logger.log('Game.exit()');
 
         Terminal.unlock();
 
@@ -41,5 +46,10 @@ class Game {
         );
     }
 };
+
+/**
+ * @type {string}
+ */
+Game.LOG_PATH = path.normalize(__dirname + '/../../logs');
 
 module.exports = new Game();
