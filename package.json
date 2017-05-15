@@ -1,0 +1,28 @@
+{
+  "name": "termblox",
+  "version": "0.0.0",
+  "description": "A simplistic, but challenging combiner/merger game for *nix consoles.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardszkcs/termblox.git"
+  },
+  "keywords": [
+    "game",
+    "1024",
+    "2048",
+    "maths",
+    "logic",
+    "terminal",
+    "console"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardszkcs/termblox/issues"
+  },
+  "homepage": "https://github.com/richardszkcs/termblox#readme"
+}
