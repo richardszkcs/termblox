@@ -27,5 +27,8 @@
   "homepage": "https://github.com/richardszkcs/termblox#readme",
   "dependencies": {
     "terminal-kit": "^1.17.2"
+  },
+  "devDependencies": {
+    "tracer": "^0.8.15"
   }
 }
