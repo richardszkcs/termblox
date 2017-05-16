@@ -46,7 +46,7 @@ class TerminalFrame {
                 .move(0, i)
                 .print(sideChar)
                 // right frame
-                .move(width, i)
+                .move(width - 1, i)
                 .print(sideChar)
                 ;
         }
@@ -76,33 +76,33 @@ TerminalFrame.FRAME_SYMBOLS = {
     /**
      * @type {string}
      */
-    TOP_LEFT_CORNER: '╔',
+    TOP_LEFT_CORNER: '█',
     
     /**
      * @type {string}
      */
-    TOP_RIGHT_CORNER: '╗',
+    TOP_RIGHT_CORNER: '█',
 
     /**
     /**
      * @type {string}
      */
-    BOTTOM_LEFT_CORNER: '╚',
+    BOTTOM_LEFT_CORNER: '█',
     
     /**
      * @type {string}
      */
-    BOTTOM_RIGHT_CORNER: '╝',
+    BOTTOM_RIGHT_CORNER: '█',
 
     /**
      * @type {string}
      */
-    HORIZONTAL: '═',
+    HORIZONTAL: '█',
 
     /**
      * @type {string}
      */
-    VERTICAL: '║',
+    VERTICAL: '██',
 };
 
 module.exports = TerminalFrame;
