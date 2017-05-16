@@ -2,11 +2,20 @@
 
 const terminal = require('terminal-kit').terminal;
       
-const TerminalFrame = require('./TerminalFrame');
+const TerminalFrame   = require('./TerminalFrame'),
+      TerminalVersion = require('./TerminalVersion'),
+      TerminalLogo    = require('./TerminalLogo');
 
 class Terminal {
 
-    constructor() {
+    constructor() {}
+
+    /**
+     * Initializes the terminal.
+     * 
+     * @param {Object} options Terminal initialization options.
+     */
+    init(options) {
         /**
          * @private
          */
@@ -26,13 +35,17 @@ class Terminal {
          * @private
          */
         this._frame = new TerminalFrame(this);
-    }
 
-    /**
-     * Initializes the terminal.
-     */
-    init() {
+        /**
+         * @private
+         */
+        this._version = new TerminalVersion(this, options.version);
+        
         this._frame.drawFrame();
+        this._version.printVersion();
+        new TerminalLogo(this).printLogo();
+
+        this.move(50, 35);
     }
 
     /**
