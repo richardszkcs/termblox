@@ -27,7 +27,10 @@ class Game {
         
         Logger.log('Game.init()');
 
-        Terminal.init();
+        Terminal.init({
+            version: this.getVersion(),
+        });
+        
         // TODO: Add after proper exit/escape handling was added.
         // Terminal.lock();
     }
